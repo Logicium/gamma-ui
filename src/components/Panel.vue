@@ -1,10 +1,10 @@
 <script setup lang="ts">
-defineProps(['color','text','subtext']);
+defineProps(["id",'color','text','subtext']);
 </script>
 
 <template>
 
-  <div class="panel">
+  <div class="panel" :id="id">
     <div class="info">
       <div>{{text}}</div>
       <div class="subtext">{{subtext}}</div>

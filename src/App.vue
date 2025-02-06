@@ -9,6 +9,7 @@ import Up from "../assets/Up.vue";
 import Footer from "@/components/Footer.vue";
 import Navbar from "@/components/Navbar.vue";
 
+
 </script>
 
 <template>
@@ -280,12 +281,6 @@ textarea{
   padding: 4rem;
 }
 
-.navbar{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
 
 .imageArea{
   display: flex;
@@ -296,7 +291,6 @@ textarea{
   width: 100%;
   height: 40vh;
   border-radius: 50px;
-
 }
 
 </style>

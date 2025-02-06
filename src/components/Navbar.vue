@@ -1,5 +1,13 @@
 <script setup lang="ts">
 
+import {nextTick} from 'vue';
+
+const scrollToRef = (id:string) => {
+  nextTick(() => {
+    console.log(window?.document?.getElementById(id));
+    window?.document?.getElementById(id)?.scrollIntoView({behavior:"smooth"})
+  });
+};
 
 </script>
 
@@ -8,10 +16,10 @@
   <div class="navbar">
     <div class="appIcon"><div>G</div></div>
     <div class="navItems">
-      <RouterLink to="#" v-scroll-to="'#home'"><div class="item">HOME</div></RouterLink>
-      <RouterLink to="#"  v-scroll-to="'#about'"><div class="item">ABOUT</div></RouterLink>
-      <div class="item">LOCATION</div>
-      <div class="contact">CONTACT US</div>
+      <div class="item">HOME</div>
+      <div class="item" @click="scrollToRef('about')">ABOUT</div>
+      <div class="item" @click="scrollToRef('location')">LOCATION</div>
+      <div class="contact" @click="scrollToRef('contact')">CONTACT US</div>
     </div>
   </div>
 
@@ -26,6 +34,13 @@
   .contact{
     width: 4rem !important;
   }
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 .item{
