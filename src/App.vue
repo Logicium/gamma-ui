@@ -96,7 +96,6 @@ import Navbar from "@/components/Navbar.vue";
     grid-template-rows: 1fr 1fr;
     height: 100% !important;
   }
-
 }
 
 .click{
